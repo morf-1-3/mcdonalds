@@ -1,0 +1,5 @@
+cd parser
+scrapy crawl mc_spider -o output.json -s FEED_EXPORT_INDENT=2
+cp output.json ../api
+cd ../api
+uvicorn main:app --reload
